@@ -34,7 +34,7 @@ function setup() {
 	
 
 	//Create a Ground
-	ground = Bodies.rectangle(width/2,650,width, 10 , {restitution:1,isStatic:false} );
+	ground = Bodies.rectangle(width/2,650,width, 10 , {isStatic:true} );
  	World.add(world, ground);
 	Engine.run(engine);  
 }
@@ -48,9 +48,7 @@ function draw()
       if(keyDown(DOWN_ARROW))
          {
 		  Matter.Body.setStatic(packageBody,false,);
-		  
-		  
-        }
+          }
    }
 
 
